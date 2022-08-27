@@ -31,11 +31,11 @@ footer {
 .address {
   margin-top: 20px;
   font-style: normal;
-}
 
-.address-maps:hover,
-.address-maps:focus {
-  color: var(--accent-color);
+  &-maps:hover,
+  &-maps:focus {
+    color: var(--accent-color);
+  }
 }
 
 .address-nav {
@@ -43,11 +43,11 @@ footer {
   text-decoration: none;
 
   transition: var(--transition-transform);
-}
 
-.address-nav:hover,
-.address-nav:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 /*______________ Приєднуйтесь */
@@ -69,37 +69,28 @@ footer {
 }
 
 .footer-soc-link {
-  width: 44px;
-  height: 44px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
 
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 
   transition: var(--transition-transform);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .footer-icon {
   fill: var(--primary-bg-color);
-}
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--accent-color);
-}
-
-.footer-icon:hover,
-.footer-icon:focus {
-  fill: var(--primary-bg-color);
-}
-
-.footer-soc-link:hover .footer-icon {
-  fill: var(--primary-bg-color);
-}
-
-.footer-soc-link:focus .footer-icon {
-  fill: var(--primary-bg-color);
+  .footer-soc-link:hover &,
+  .footer-soc-link:focus & {
+    fill: var(--primary-bg-color);
+  }
 }
