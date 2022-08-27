@@ -8,6 +8,7 @@
 @import './components/logo';
 @import './components/button';
 @import './components/section-title';
+@import './components/modal';
 // Heder======================================
 @import './layouts/heder';
 // MAIN==========================================
@@ -17,3 +18,7 @@
 @import './layouts/team';
 @import './layouts/regular';
 //Footer=============================================
+@import './layouts/footer';
+@import './layouts/footer-subscribe';
+//PORTFOLIO-=============================================
+@import './layouts/portfolio';
