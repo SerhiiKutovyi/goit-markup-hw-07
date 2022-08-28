@@ -63,12 +63,12 @@ footer {
   text-transform: uppercase;
 }
 
-.footer-soc-list {
+.social-list--dark {
   display: flex;
   gap: 10px;
 }
 
-.footer-soc-link {
+.social-list__link--dark-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,11 +86,11 @@ footer {
   }
 }
 
-.footer-icon {
+.social-list__icon--dark-icon {
   fill: var(--primary-bg-color);
 
-  .footer-soc-link:hover &,
-  .footer-soc-link:focus & {
+  .social-list__link--dark-link:hover &,
+  .social-list__link--dark-link:focus & {
     fill: var(--primary-bg-color);
   }
 }
