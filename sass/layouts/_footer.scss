@@ -66,31 +66,21 @@ footer {
 .social-list--dark {
   display: flex;
   gap: 10px;
-}
+  .social-list__link--dark-link {
+    background: rgba(255, 255, 255, 0.1);
 
-.social-list__link--dark-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-
-  transition: var(--transition-transform);
-
-  &:hover,
-  &:focus {
-    background-color: var(--accent-color);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
   }
-}
 
-.social-list__icon--dark-icon {
-  fill: var(--primary-bg-color);
-
-  .social-list__link--dark-link:hover &,
-  .social-list__link--dark-link:focus & {
+  .social-list__icon--dark-icon {
     fill: var(--primary-bg-color);
+
+    .social-list__link--dark-link:hover &,
+    .social-list__link--dark-link:focus & {
+      fill: var(--primary-bg-color);
+    }
   }
 }

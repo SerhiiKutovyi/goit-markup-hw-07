@@ -63,22 +63,32 @@ ul.ol {
   padding-left: 0;
 }
 
-img {
-  display: block;
-}
-
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .container {
-  width: 1200px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1600px;
+  }
 }
 
 .logo {
@@ -97,61 +107,6 @@ img {
 }
 .logo-second-foot {
   color: var(--primary-bg-color);
-}
-
-.button {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  padding: 10px 32px;
-  min-width: 216px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  transition: var(--transition-transform);
-}
-.button:hover, .button:focus {
-  color: var(--accent-color);
-  background-color: rgb(245, 244, 250);
-  border: none;
-  transition: var(--transition-transform);
-}
-
-.filter {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.filter .item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.btn {
-  color: var(--title-text-color);
-  background-color: rgb(245, 244, 250);
-  border: none;
-  cursor: pointer;
-  padding: 6px 22px 6px 22px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-  transition: var(--transition-transform), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn:hover, .btn:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: none;
-  transition: var(--transition-transform), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-title {
@@ -365,6 +320,65 @@ img {
   background-image: url(../images/vector.svg);
 }
 
+.button {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  transition: var(--transition-transform);
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--accent-color);
+  background-color: rgb(245, 244, 250);
+  border: none;
+  transition: var(--transition-transform);
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.btn {
+  color: var(--title-text-color);
+  background-color: rgb(245, 244, 250);
+  border: none;
+  cursor: pointer;
+  padding: 6px 22px 6px 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  transition: var(--transition-transform), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: none;
+  transition: var(--transition-transform), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 header {
   border-bottom: 1px solid rgb(236, 236, 236);
 }
@@ -411,6 +425,7 @@ header {
 .current {
   color: var(--accent-color);
   display: flex;
+  transition: var(--transition-transform);
 }
 
 .current::after {
@@ -492,9 +507,12 @@ header {
 }
 
 .hero-section {
+  display: flex;
+  align-items: center;
+  text-align: center;
   background-color: rgb(196, 196, 196);
-  height: 600px;
-  max-width: 1600px;
+  width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
@@ -502,30 +520,34 @@ header {
   background-position: center;
   background-size: cover;
 }
-
-.hero-section .section {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .hero-section {
+    width: 768px;
+  }
 }
-
-.hero-section .container {
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 1600px) {
+  .hero-section {
+    width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero-title {
   margin-bottom: 30px;
-  display: block;
-  color: rgb(255, 255, 255);
-  text-align: center;
   font-weight: 900;
-  max-width: 696px;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
+  font-size: 26px;
+  line-height: 1.6153846154;
+  text-align: center;
   text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    width: 360px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .feature__list {
@@ -768,25 +790,16 @@ footer {
   display: flex;
   gap: 10px;
 }
-
-.social-list__link--dark-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.social-list--dark .social-list__link--dark-link {
   background: rgba(255, 255, 255, 0.1);
-  transition: var(--transition-transform);
 }
-.social-list__link--dark-link:hover, .social-list__link--dark-link:focus {
+.social-list--dark .social-list__link--dark-link:hover, .social-list--dark .social-list__link--dark-link:focus {
   background-color: var(--accent-color);
 }
-
-.social-list__icon--dark-icon {
+.social-list--dark .social-list__icon--dark-icon {
   fill: var(--primary-bg-color);
 }
-.social-list__link--dark-link:hover .social-list__icon--dark-icon, .social-list__link--dark-link:focus .social-list__icon--dark-icon {
+.social-list__link--dark-link:hover .social-list--dark .social-list__icon--dark-icon, .social-list__link--dark-link:focus .social-list--dark .social-list__icon--dark-icon {
   fill: var(--primary-bg-color);
 }
 

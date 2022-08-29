@@ -31,7 +31,6 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
-
   transition: var(--transition-transform);
 }
 
@@ -45,7 +44,7 @@ header {
   color: var(--accent-color);
 
   display: flex;
-  // transition: var(--transition-transform);
+  transition: var(--transition-transform);
 }
 
 .current::after {
